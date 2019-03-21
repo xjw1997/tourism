@@ -1,0 +1,65 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>登录</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link href="../css/bootstrap.css" rel='stylesheet' type='text/css' />
+    <link href="../css/style.css" rel='stylesheet' type='text/css' />
+    <script src="../js/jquery-1.11.1.min.js"></script>
+</head>
+<body class="cbp-spmenu-push">
+<div class="main-content">
+    <div id="page-wrapper">
+        <div class="main-page login-page ">
+            <h2 class="title1">登录</h2>
+            <div class="widget-shadow">
+                <div class="login-body">
+                    <form action="login" method="post">
+                        <input type="email" class="user" name="email" placeholder="你的邮箱" required="">
+                        <input type="password" name="password" class="lock" placeholder="请输入密码" required="">
+                        <div class="forgot-grid">
+                            <label class="checkbox"><input type="checkbox" name="checkbox" checked=""><i></i>记住我</label>
+                            <div class="forgot">
+                                <a href="#">忘记密码?</a>
+                            </div>
+                            <div class="clearfix"> </div>
+                        </div>
+                        <input type="submit" name="Sign In" value="登录">
+                        <div class="registration">
+                            还没有账户？
+                            <a class="" href="signup.html">
+                                去注册
+                            </a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!--footer-->
+    <div class="footer">
+        <p>&copy; 2018 Glance Design Dashboard. All Rights Reserved | Design by
+            <a href="" target="_blank">w3layouts</a>
+        </p>
+    </div>
+</div>
+<script>
+    var menuLeft = document.getElementById('cbp-spmenu-s1'),
+        showLeftPush = document.getElementById('showLeftPush'),
+        body = document.body;
+    showLeftPush.onclick = function() {
+        classie.toggle(this, 'active');
+        classie.toggle(body, 'cbp-spmenu-push-toright');
+        classie.toggle(menuLeft, 'cbp-spmenu-open');
+        disableOther('showLeftPush');
+    };
+    function disableOther(button) {
+        if(button !== 'showLeftPush') {
+            classie.toggle(showLeftPush, 'disabled');
+        }
+    }
+</script>
+</body>
+</html>
