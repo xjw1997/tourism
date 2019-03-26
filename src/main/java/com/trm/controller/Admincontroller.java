@@ -1,6 +1,6 @@
 package com.trm.controller;
 
-import com.trm.service.impl.AdminServiceimpl;
+import com.trm.service.Impl.AdminServiceimpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestParam;
