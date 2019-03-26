@@ -1,7 +1,9 @@
 package com.trm.repositroy;
 
 import com.trm.models.Admin;
+
 import java.util.List;
+
 
 public interface AdminMapper {
     /**

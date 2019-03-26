@@ -1,7 +1,9 @@
 package com.trm.repositroy;
 
 import com.trm.models.Areas;
+
 import java.util.List;
+
 
 public interface AreasMapper {
     /**
