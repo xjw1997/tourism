@@ -70,7 +70,9 @@
     from spots
   </select>
 
-  <select id="selectSpots" resultType="BaseResultMap">
-    select top(5)* from spots
+  <select id="selectSpots" resultMap="BaseResultMap">
+    select `s-id`, `s-name`, `s-price`, `s-days`, `s-brief`, `s-type`, `s-tool`, `s-img`, `a-id`
+    from spots
+    where 1=1 limit 5
   </select>
 </mapper>

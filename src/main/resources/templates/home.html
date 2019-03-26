@@ -765,10 +765,10 @@
 
             <ul class="nav_main fr">
                 <li>
-                    <a class="hover" href="http://www.bytst.com/" title="北青旅首页">首页</a>
+                    <a class="hover" href="#" title="北青旅首页">首页</a>
                 </li>
 
-                <li th:each="Areas:${areaslist }">
+                <li th:each="Areas:${session.areaslist }">
                     <a href="/chujing.html" th:text="${Areas.getaName() }"></a>
                 </li>
 
@@ -829,60 +829,15 @@
         <div class="index_cheap fl">
             <h2>特价旅游</h2>
             <ul>
-                <li>
+                <li th:each="sptop:${spotstop}">
                     <div class="pic">
-                        <a href="http://127.0.0.1:8020/Tourism/detailed.html?__hbt=1531298257386" target="_blank" title="&lt;初见泰国 曼谷-芭提雅-格兰岛7日&gt;畅游金沙岛+月光岛 全程无自费 曼谷3晚泰式五星 芭提雅2晚海边五星 3大特色餐厅美食享不停"><img class="lazy" src="/images/lazy.gif" data-original="uploadfile/dongnanya/20130606023923415.jpg" alt="&lt;初见泰国 曼谷-芭提雅-格兰岛7日&gt;畅游金沙岛+月光岛 全程无自费 曼谷3晚泰式五星 芭提雅2晚海边五星 3大特色餐厅美食享不停" title="&lt;初见泰国 曼谷-芭提雅-格兰岛7日&gt;畅游金沙岛+月光岛 全程无自费 曼谷3晚泰式五星 芭提雅2晚海边五星 3大特色餐厅美食享不停" /></a>
+                        <a href="#" target="_blank" ><img class="lazy"th:src="@{C:Users/Administrator/Desktop/img/${sptop.getsImg/1.jpg}}" /></a>
                     </div>
                     <div class="tit">
-                        <a href="http://127.0.0.1:8020/Tourism/detailed.html?__hbt=1531298257386">&lt;初见泰国 曼谷-芭提雅-格兰岛7日&gt;畅游金沙岛+月光岛 全程无自费 曼谷3晚泰式五星 芭提雅2晚海边五星 3大特色餐厅美食享不停</a>
+                        <a href="#" target="_blank" th:text="${sptop.getsName()}"></a>
                     </div>
-                    <div class="number">编号：1021330</div>
-                    <div class="price"><em>原价：¥3200</em>¥<span>2300</span>起</div>
-                    <div class="discount">7.1折</div>
-                </li>
-                <li>
-                    <div class="pic">
-                        <a href="#" target="_blank" title="&lt;慢生活 成都自由行双飞6日&gt;体验慢生活 玩转成都 百变花样嗨翻美食之城"><img class="lazy" src="/images/lazy.gif" data-original="uploadfile/sichuan/20130110095650295.jpg" alt="&lt;慢生活 成都自由行双飞6日&gt;体验慢生活 玩转成都 百变花样嗨翻美食之城" title="&lt;慢生活 成都自由行双飞6日&gt;体验慢生活 玩转成都 百变花样嗨翻美食之城" /></a>
-                    </div>
-                    <div class="tit">
-                        <a href="#" target="_blank" title="&lt;慢生活 成都自由行双飞6日&gt;体验慢生活 玩转成都 百变花样嗨翻美食之城">&lt;慢生活 成都自由行双飞6日&gt;体验慢生活 玩转成都 百变花样嗨翻美食之城</a>
-                    </div>
-                    <div class="number">编号：1015652</div>
-                    <div class="price"><em>原价：¥2910</em>¥<span>2400</span>起</div>
-                    <div class="discount">8.2折</div>
-                </li>
-                <li>
-                    <div class="pic">
-                        <a href="#" target="_blank" title="&lt;王者归来 拉萨-林芝-山南-那曲-日喀则双卧13日&gt;北京成团带全陪 一价全含 全程升级挂三酒店"><img class="lazy" src="/images/lazy.gif" data-original="uploadfile/2016/0303/20160303032331367.jpg" alt="&lt;王者归来 拉萨-林芝-山南-那曲-日喀则双卧13日&gt;北京成团带全陪 一价全含 全程升级挂三酒店" title="&lt;王者归来 拉萨-林芝-山南-那曲-日喀则双卧13日&gt;北京成团带全陪 一价全含 全程升级挂三酒店" /></a>
-                    </div>
-                    <div class="tit">
-                        <a href="#" target="_blank" title="&lt;王者归来 拉萨-林芝-山南-那曲-日喀则双卧13日&gt;北京成团带全陪 一价全含 全程升级挂三酒店">&lt;王者归来 拉萨-林芝-山南-那曲-日喀则双卧13日&gt;北京成团带全陪 一价全含 全程升级挂三酒店</a>
-                    </div>
-                    <div class="number">编号：1023450</div>
-                    <div class="price"><em>原价：¥4700</em>¥<span>3800</span>起</div>
-                    <div class="discount">8.0折</div>
-                </li>
-                <li>
-                    <div class="pic">
-                        <a href="#" target="_blank" title="&lt;优赏本州 本州经典6日&gt;东京半天自由活动 升级2晚温泉酒店 传统古都奈良 精华本州一次看尽 日式小火锅 日式定食 中华料理"><img class="lazy" src="/images/lazy.gif" data-original="uploadfile/riben/20170728025736801.jpg" alt="&lt;优赏本州 本州经典6日&gt;东京半天自由活动 升级2晚温泉酒店 传统古都奈良 精华本州一次看尽 日式小火锅 日式定食 中华料理" title="&lt;优赏本州 本州经典6日&gt;东京半天自由活动 升级2晚温泉酒店 传统古都奈良 精华本州一次看尽 日式小火锅 日式定食 中华料理" /></a>
-                    </div>
-                    <div class="tit">
-                        <a href="#" target="_blank" title="&lt;优赏本州 本州经典6日&gt;东京半天自由活动 升级2晚温泉酒店 传统古都奈良 精华本州一次看尽 日式小火锅 日式定食 中华料理">&lt;优赏本州 本州经典6日&gt;东京半天自由活动 升级2晚温泉酒店 传统古都奈良 精华本州一次看尽 日式小火锅 日式定食 中华料理</a>
-                    </div>
-                    <div class="number">编号：1022169</div>
-                    <div class="price"><em>原价：¥5000</em>¥<span>4300</span>起</div>
-                    <div class="discount">8.6折</div>
-                </li>
-                <li>
-                    <div class="pic">
-                        <a href="#" target="_blank" title="&lt;北欧四国9日&gt;北欧国际航空 全程三-四星酒店 午晚餐为中式五菜一汤+茶水+水果 峡湾酒店内特色餐"><img class="lazy" src="/images/lazy.gif" data-original="uploadfile/ouzhou/20170808051831380.jpg" alt="&lt;北欧四国9日&gt;北欧国际航空 全程三-四星酒店 午晚餐为中式五菜一汤+茶水+水果 峡湾酒店内特色餐" title="&lt;北欧四国9日&gt;北欧国际航空 全程三-四星酒店 午晚餐为中式五菜一汤+茶水+水果 峡湾酒店内特色餐" /></a>
-                    </div>
-                    <div class="tit">
-                        <a href="#" target="_blank" title="&lt;北欧四国9日&gt;北欧国际航空 全程三-四星酒店 午晚餐为中式五菜一汤+茶水+水果 峡湾酒店内特色餐">&lt;北欧四国9日&gt;北欧国际航空 全程三-四星酒店 午晚餐为中式五菜一汤+茶水+水果 峡湾酒店内特色餐</a>
-                    </div>
-                    <div class="number">编号：1022859</div>
-                    <div class="price"><em>原价：¥12019</em>¥<span>9319</span>起</div>
-                    <div class="discount">7.7折</div>
+                    <div class="number" th:text="'编号：'+${sptop.getsId()}"></div>
+                    <div class="price">¥<span th:text="${sptop.getsPrice()}"></span>起</div>
                 </li>
             </ul>
         </div>
