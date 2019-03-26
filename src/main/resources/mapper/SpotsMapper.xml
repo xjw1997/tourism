@@ -71,6 +71,6 @@
   </select>
 
   <select id="selectSpots" resultType="BaseResultMap">
-    select top(5)* from spots
+    select * from spots where 1=1 limit 5
   </select>
 </mapper>
