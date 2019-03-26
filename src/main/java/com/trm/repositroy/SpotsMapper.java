@@ -44,4 +44,6 @@ public interface SpotsMapper {
      * @mbg.generated
      */
     int updateByPrimaryKey(Spots record);
+
+    List<Spots> selectSpots();
 }
