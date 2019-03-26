@@ -1,7 +1,7 @@
 package com.trm.controller;
 
 
-import com.trm.service.impl.CustomerServiceimpl;
+import com.trm.service.Impl.CustomerServiceimpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.servlet.ModelAndView;

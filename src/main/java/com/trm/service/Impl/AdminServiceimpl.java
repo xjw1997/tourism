@@ -1,4 +1,4 @@
-package com.trm.service.impl;
+package com.trm.service.Impl;
 
 import com.trm.repositroy.AdminMapper;
 import com.trm.service.AdminService;

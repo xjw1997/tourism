@@ -7,12 +7,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-@Service
-public class AreasServiceImpl implements AreasService {
+@Service("AreaService")
+public class AreasServiceimpl implements AreasService {
     @Autowired(required = false)
-    private AreasMapper mapper;
+    private AreasMapper dao ;
+
     @Override
     public List<Areas> getAll() {
-        return  mapper.selectAll();
+        return dao.selectAll();
     }
 }
