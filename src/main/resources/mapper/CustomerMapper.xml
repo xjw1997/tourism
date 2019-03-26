@@ -26,7 +26,7 @@
     -->
     insert into customer (`c-id`, `c-name`, `c-identity`,
       `c-phone`)
-    values (#{cId,jdbcType=INTEGER}, #{cName,jdbcType=VARCHAR}, #{cIdentity,jdbcType=VARCHAR}, 
+    values (#{cId,jdbcType=INTEGER}, #{cName,jdbcType=VARCHAR}, #{cIdentity,jdbcType=VARCHAR},
       #{cPhone,jdbcType=VARCHAR})
   </insert>
   <update id="updateByPrimaryKey" parameterType="com.trm.models.Customer">

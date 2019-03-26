@@ -1,4 +1,4 @@
-package com.trm.service.impl;
+package com.trm.service.Impl;
 
 import com.trm.models.Areas;
 import com.trm.repositroy.AreasMapper;
@@ -12,7 +12,7 @@ public class AreasServiceimpl implements AreasService {
     @Autowired(required = false)
     private AreasMapper dao ;
     @Override
-    public List<Areas> findallareas() {
+    public List<Areas> getAll() {
         return dao.selectAll();
     }
 }
