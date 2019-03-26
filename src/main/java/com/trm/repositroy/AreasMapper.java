@@ -2,6 +2,9 @@ package com.trm.repositroy;
 
 import com.trm.models.Areas;
 import org.apache.ibatis.annotations.Mapper;
+import org.springframework.stereotype.Repository;
+
+import org.apache.ibatis.annotations.Mapper;
 
 import java.util.List;
 @Mapper //表示和mapper.xml对应
