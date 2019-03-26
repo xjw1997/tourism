@@ -11,6 +11,7 @@ import java.util.List;
 public class AreasServiceimpl implements AreasService {
     @Autowired(required = false)
     private AreasMapper dao ;
+
     @Override
     public List<Areas> getAll() {
         return dao.selectAll();
