@@ -14,4 +14,9 @@ public class AdminServiceimpl implements AdminService {
     public Admin login(String username, String password) {
         return dao.login(username,password);
     }
+
+    @Override
+    public int insert(Admin record) {
+        return dao.insert(record);
+    }
 }
