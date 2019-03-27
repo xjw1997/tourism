@@ -7,7 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-@Service("AreaService")
+@Service
 public class AreasServiceimpl implements AreasService {
     @Autowired(required = false)
     private AreasMapper dao ;

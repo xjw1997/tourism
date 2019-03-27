@@ -2,6 +2,7 @@ package com.trm.repositroy;
 
 import com.trm.models.Spots;
 import org.apache.ibatis.annotations.Mapper;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
 @Mapper
