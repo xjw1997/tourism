@@ -2,6 +2,7 @@ package com.trm.controller;
 
 import com.trm.models.Admin;
 import com.trm.service.Impl.AdminServiceimpl;
+import org.apache.ibatis.annotations.Param;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -16,6 +17,10 @@ public class Admincontroller {
     public  String  lg(){
         return "login";
     }
+    @RequestMapping("/zc")
+    public  String  set(){
+        return "signup";
+    }
 
     @RequestMapping("/enter")
     public ModelAndView login(ModelAndView mv , @RequestParam("username") String username ,@RequestParam("password") String password){
@@ -28,6 +33,14 @@ public class Admincontroller {
               mv.setViewName("/login");
             return  mv;
           }
-
+    }
+    @RequestMapping("/set")
+    public  ModelAndView insert(ModelAndView mv, @RequestParam("username") String username, @RequestParam("password") String password){
+          Admin admin = new Admin();
+          admin.setUsername(username);
+          admin.setPassword(password);
+          int insert = adminServiceimpl.insert(admin);
+          mv.setViewName("redirect:/lg");
+        return mv;
     }
 }
