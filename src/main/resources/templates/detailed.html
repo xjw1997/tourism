@@ -1,5 +1,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://thymeleaf.org">
 
 <head>
     <title>初见泰国 曼谷-芭提雅-格兰岛7日畅游金沙岛+月光岛 全程无自费 曼谷3晚泰式五星 芭提雅2晚海边五星 3大特色餐厅美食享不停_泰国线路_北青旅</title>
@@ -811,23 +812,22 @@
         <div class="detail_main">
             <div class="detail_cnt">
                 <div class="slider_box" id="slider_name">
-                    <ul class="silder_con">
-                        <li class="silder_panel"><img src="uploadfile/dongnanya/20130606023923415.jpg" alt="初见泰国 曼谷-芭提雅-格兰岛7日畅游金沙岛+月光岛 全程无自费 曼谷3晚泰式五星 芭提雅2晚海边五星 3大特色餐厅美食享不停" title="初见泰国 曼谷-芭提雅-格兰岛7日畅游金沙岛+月光岛 全程无自费 曼谷3晚泰式五星 芭提雅2晚海边五星 3大特色餐厅美食享不停" /></li>
-                        <li class="silder_panel"><img src="uploadfile/dongnanya/20130606030846641.jpg" alt="初见泰国 曼谷-芭提雅-格兰岛7日畅游金沙岛+月光岛 全程无自费 曼谷3晚泰式五星 芭提雅2晚海边五星 3大特色餐厅美食享不停" title="初见泰国 曼谷-芭提雅-格兰岛7日畅游金沙岛+月光岛 全程无自费 曼谷3晚泰式五星 芭提雅2晚海边五星 3大特色餐厅美食享不停" /></li>
-                        <li class="silder_panel"><img src="uploadfile/dongnanya/20130606023502981.jpg" alt="初见泰国 曼谷-芭提雅-格兰岛7日畅游金沙岛+月光岛 全程无自费 曼谷3晚泰式五星 芭提雅2晚海边五星 3大特色餐厅美食享不停" title="初见泰国 曼谷-芭提雅-格兰岛7日畅游金沙岛+月光岛 全程无自费 曼谷3晚泰式五星 芭提雅2晚海边五星 3大特色餐厅美食享不停" /></li>
+                    <ul class="silder_con" th:each="Spots:${spots }">
+                        <li class="silder_panel"><img th:src="@{'imgs/'+${Spots.getsImg()}+'/1.jpg'}" /></li>
+                        <li class="silder_panel"><img th:src="@{'imgs/'+${Spots.getsImg()}+'/2.jpg'}" /></li>
+                        <li class="silder_panel"><img th:src="@{'imgs/'+${Spots.getsImg()}+'/3.jpg'}" /></li>
                     </ul>
                     <ul class="silder_nav">
-                        <li><img src="uploadfile/dongnanya/20130606023923415.jpg" alt="初见泰国 曼谷-芭提雅-格兰岛7日畅游金沙岛+月光岛 全程无自费 曼谷3晚泰式五星 芭提雅2晚海边五星 3大特色餐厅美食享不停" title="初见泰国 曼谷-芭提雅-格兰岛7日畅游金沙岛+月光岛 全程无自费 曼谷3晚泰式五星 芭提雅2晚海边五星 3大特色餐厅美食享不停" /></li>
-                        <li><img src="uploadfile/dongnanya/20130606030846641.jpg" alt="初见泰国 曼谷-芭提雅-格兰岛7日畅游金沙岛+月光岛 全程无自费 曼谷3晚泰式五星 芭提雅2晚海边五星 3大特色餐厅美食享不停" title="初见泰国 曼谷-芭提雅-格兰岛7日畅游金沙岛+月光岛 全程无自费 曼谷3晚泰式五星 芭提雅2晚海边五星 3大特色餐厅美食享不停" /></li>
-                        <li><img src="uploadfile/dongnanya/20130606023502981.jpg" alt="初见泰国 曼谷-芭提雅-格兰岛7日畅游金沙岛+月光岛 全程无自费 曼谷3晚泰式五星 芭提雅2晚海边五星 3大特色餐厅美食享不停" title="初见泰国 曼谷-芭提雅-格兰岛7日畅游金沙岛+月光岛 全程无自费 曼谷3晚泰式五星 芭提雅2晚海边五星 3大特色餐厅美食享不停" /></li>
+                        <li><img  th:src="@{'imgs/'+${Spots.getsImg()}+'/1.jpg'}" /></li>
+                        <li><img th:src="@{'imgs/'+${Spots.getsImg()}+'/2.jpg'}" /></li>
+                        <li><img th:src="@{'imgs/'+${Spots.getsImg()}+'/3.jpg'}" /></li>
                     </ul>
                 </div>
 
                 <div class="line_infos">
-                    <h1>初见泰国 曼谷-芭提雅-格兰岛7日<span>畅游金沙岛+月光岛 全程无自费 曼谷3晚泰式五星 芭提雅2晚海边五星 3大特色餐厅美食享不停</span></h1>
+                    <h1 th:text="${Spots.getsName() }"></h1>
                     <div class="prices">
-                        <div class="qlprice">现价：¥<span>2300</span>起</div>
-                        <div class="msprice">原价：¥3200起</div>
+                        <div class="qlprice">现价：¥<span th:text="${Spots.getsPrice() }"></span>起</div>
                     </div>
 
                     <form class="yuding" action="" method="post">
@@ -904,10 +904,10 @@
                     <div class="hr"></div>
 
                     <ul>
-                        <li class="one">编　　号：1021330</li>
-                        <li class="two">类　　型：<span class="tourtype">跟团游</span></li>
-                        <li class="one">天　　数：7</li>
-                        <li class="two">交　　通：飞机</li>
+                        <li class="one" th:text="'编　　号:'+${Spots.getsId() }"></li>
+                        <li class="two" th:text="'类　　型:'+${Spots.getsType() }"></li>
+                        <li class="one" th:text="'天　　数:'+${Spots.getsDays() }"></li>
+                        <li class="two" th:text="'交　　通：'+${Spots.getsTool() }"></li>
                         <li class="one">发团日期：每月多团</li>
                         <li class="two">报名提示：出境提前两周，国内提前一周</li>
                         <li class="end">付款方式：现金、银行汇款、刷卡</li>
