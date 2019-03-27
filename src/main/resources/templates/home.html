@@ -830,7 +830,7 @@
             <ul>
                 <li th:each="sptop:${spotstop}">
                     <div class="pic">
-                        <a href="#" target="_blank" ><img class="lazy"th:src="@{'imgs/'+${sptop.getsImg()}+'/1.jpg'}" /></a>
+                        <a href="#" target="_blank" ><img class="lazy" th:src="@{'../imgs/'+${sptop.getsImg()}+'/1.jpg'}" /></a>
                     </div>
                     <div class="tit">
                         <a href="#" target="_blank" th:text="${sptop.getsName()}"></a>
