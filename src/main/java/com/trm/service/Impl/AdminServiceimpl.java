@@ -1,5 +1,6 @@
 package com.trm.service.Impl;
 
+import com.trm.models.Admin;
 import com.trm.repositroy.AdminMapper;
 import com.trm.service.AdminService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,8 +11,7 @@ public class AdminServiceimpl implements AdminService {
     @Autowired(required = false)
     private AdminMapper dao;
     @Override
-    public int login(String adname, String password) {
-
-        return 0;
+    public Admin login(String username, String password) {
+        return dao.login(username,password);
     }
 }

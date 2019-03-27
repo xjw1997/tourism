@@ -1,5 +1,7 @@
 package com.trm.service;
 
+import com.trm.models.Admin;
+
 public interface AdminService {
-    int login(String adname , String password);
+    Admin login(String username, String password);
 }

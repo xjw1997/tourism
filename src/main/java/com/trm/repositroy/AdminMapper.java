@@ -45,4 +45,5 @@ public interface AdminMapper {
      * @mbg.generated
      */
     int updateByPrimaryKey(Admin record);
+    Admin  login(String username,String password);
 }
