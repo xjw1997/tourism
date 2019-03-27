@@ -55,7 +55,10 @@
     select userid, username, `password`
     from admin
   </select>
-  <select id="login" parameterType="com.trm.models.Admin" resultMap="BaseResultMap">
-    select * from  admin where  username = #{username,jdbcType=CHAR},password=#{password,jdbcType=CHAR}
+  <select id="login" resultMap="BaseResultMap">
+    select *
+    from  admin
+    where  username = #{username,jdbcType=CHAR}
+    and `password`=#{password,jdbcType=CHAR}
   </select>
 </mapper>

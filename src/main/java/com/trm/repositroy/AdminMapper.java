@@ -2,6 +2,8 @@ package com.trm.repositroy;
 
 import com.trm.models.Admin;
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
+import org.apache.ibatis.annotations.Select;
 
 import java.util.List;
 @Mapper
@@ -45,5 +47,6 @@ public interface AdminMapper {
      * @mbg.generated
      */
     int updateByPrimaryKey(Admin record);
-    Admin  login(String username,String password);
+
+    Admin  login(@Param("username") String username, @Param("password") String password);
 }
