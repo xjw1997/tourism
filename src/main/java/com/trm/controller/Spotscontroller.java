@@ -19,7 +19,7 @@ public class Spotscontroller {
         Spots spots = new Spots();
         spots = spotsService.findSpotsBysid(sid);
         mv.addObject("spots", spots);
-        mv.setViewName("/detailed");
+        mv.setViewName("redirect:/detailsById");
         return mv;
     }
         @RequestMapping("/spotstop")
