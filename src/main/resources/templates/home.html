@@ -772,7 +772,7 @@
 
                 <li th:each="Areas:${session.areaslist }">
 
-                    <a href="/chujing.html" th:text="${Areas.getaName() }"></a>
+                    <a th:href="@{'/page?aid='+${Areas.getaId()},'&currPage=1'}" th:text="${Areas.getaName() }"></a>
                 </li>
 
             </ul>
