@@ -14,6 +14,10 @@ public class SpotsServiceimpl implements SpotsService {
     private SpotsMapper mapper;
 
     @Override
+
+    public Spots findSpotsBysid(Integer sid) {
+        return mapper.selectByPrimaryKey(sid);
+}
     public List<Spots> getSpots() {
         return mapper.selectSpots();
     }

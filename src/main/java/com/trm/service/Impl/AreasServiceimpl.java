@@ -10,10 +10,10 @@ import java.util.List;
 @Service
 public class AreasServiceimpl implements AreasService {
     @Autowired(required = false)
-    private AreasMapper dao ;
+    private AreasMapper mapper ;
 
     @Override
     public List<Areas> getAll() {
-        return dao.selectAll();
+        return mapper.selectAll();
     }
 }
