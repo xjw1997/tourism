@@ -18,6 +18,9 @@ public class Spotscontroller {
     private SpotsService spotsService;
     @Autowired(required = false)
     private AreasService areasService;
+    /**
+     * 根据景点sid查询景点表
+     * */
     @RequestMapping("/findSpots")
     public ModelAndView findSpots(ModelAndView mv , @RequestParam("sid") Integer sid) {
         Spots spots = new Spots();
@@ -28,6 +31,9 @@ public class Spotscontroller {
         mv.setViewName("detailed");
         return mv;
     }
+    /**
+     * 查询景点前五条数据
+     * */
         @RequestMapping("/spotstop")
         public String selectspots (HttpServletRequest request){
             List<Spots> spotsList = spotsService.getSpots();

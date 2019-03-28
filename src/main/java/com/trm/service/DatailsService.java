@@ -5,5 +5,8 @@ import com.trm.models.Details;
 import java.util.List;
 
 public interface DatailsService {
+    /**
+     *查询全部
+     * */
     List<Details> getAll();
 }
