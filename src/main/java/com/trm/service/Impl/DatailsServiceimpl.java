@@ -15,4 +15,11 @@ public class DatailsServiceimpl implements DatailsService {
     public List<Details> getAll() {
         return mapper.selectAll();
     }
+
+    @Override
+    public List<Details> AccordingToId(Integer id) {
+        return mapper.detailsById(id);
+    }
+
+
 }
