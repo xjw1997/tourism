@@ -16,4 +16,9 @@ public class AreasServiceimpl implements AreasService {
     public List<Areas> getAll() {
         return mapper.selectAll();
     }
+
+    @Override
+    public Areas getName(Integer id) {
+        return mapper.selectByPrimaryKey(id);
+    }
 }

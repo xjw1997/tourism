@@ -1,6 +1,8 @@
 package com.trm.controller;
 
+import com.trm.models.Areas;
 import com.trm.models.Spots;
+import com.trm.service.AreasService;
 import com.trm.service.SpotsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -14,12 +16,16 @@ import java.util.List;
 public class Spotscontroller {
     @Autowired(required = false)
     private SpotsService spotsService;
+    @Autowired(required = false)
+    private AreasService areasService;
     @RequestMapping("/findSpots")
     public ModelAndView findSpots(ModelAndView mv , @RequestParam("sid") Integer sid) {
         Spots spots = new Spots();
         spots = spotsService.findSpotsBysid(sid);
+        Areas areas = areasService.getName(spots.getaId());
+        mv.addObject("areas",areas);
         mv.addObject("spots", spots);
-        mv.setViewName("/detailed");
+        mv.setViewName("detailed");
         return mv;
     }
         @RequestMapping("/spotstop")
