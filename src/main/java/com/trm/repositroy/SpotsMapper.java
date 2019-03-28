@@ -2,9 +2,13 @@ package com.trm.repositroy;
 
 import com.trm.models.Spots;
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
+import org.apache.ibatis.annotations.Select;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
+import java.util.Map;
+
 @Mapper
 public interface SpotsMapper {
     /**
@@ -53,4 +57,10 @@ public interface SpotsMapper {
      * @mbg.generated
      * */
     List<Spots> selectSpots();
+
+    @Select("select count(*) from spots where `a-id`=#{aid}")
+    Integer selectcount(Integer aid);
+
+    @Select("select * from spots where `a-id`=#{aid} limit #{begin},#{num}")
+    List<Spots> selectpage(@Param("aid") Integer aid, @Param("begin") Integer begin,@Param("num") Integer num);
 }

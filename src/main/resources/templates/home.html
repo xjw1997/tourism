@@ -766,15 +766,9 @@
                 <li>
                     <a class="hover" href="#" title="北青旅首页">首页</a>
                 </li>
-
-
-                <li th:each="Areas:${areaslist }">
-
                 <li th:each="Areas:${session.areaslist }">
-
-                    <a href="/chujing.html" th:text="${Areas.getaName() }"></a>
+                    <a th:href="@{/page(aid=${Areas.getaId()},currPage=1)}" th:text="${Areas.getaName() }"></a>
                 </li>
-
             </ul>
         </div>
     </div>
@@ -834,7 +828,7 @@
             <ul>
                 <li th:each="sptop:${spotstop}">
                     <div class="pic">
-                        <a href="#" target="_blank" ><img class="lazy" th:src="@{'../imgs/'+${sptop.getsImg()}+'/1.jpg'}" /></a>
+                        <a href="#" target="_blank" ><img class="lazy" th:src="@{'imgs/'+${sptop.getsImg()}+'/1.jpg'}" /></a>
                     </div>
                     <div class="tit">
                         <a href="#" target="_blank" th:text="${sptop.getsName()}"></a>

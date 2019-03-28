@@ -3,6 +3,7 @@ package com.trm.service;
 import com.trm.models.Spots;
 
 import java.util.List;
+import java.util.Map;
 
 
 public interface SpotsService {
@@ -14,5 +15,8 @@ public interface SpotsService {
      * 查询前五条数据
      * */
     List<Spots> getSpots();
+
+    Integer getcount(Integer aid);
+    List<Spots> getpage(Integer aid,Integer begin,Integer num);
 }
 

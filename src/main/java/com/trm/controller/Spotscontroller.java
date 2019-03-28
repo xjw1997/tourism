@@ -4,13 +4,17 @@ import com.trm.models.Areas;
 import com.trm.models.Spots;
 import com.trm.service.AreasService;
 import com.trm.service.SpotsService;
+import com.trm.util.PageBean;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 import javax.servlet.http.HttpServletRequest;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 @Controller
 public class Spotscontroller {
@@ -39,5 +43,21 @@ public class Spotscontroller {
             List<Spots> spotsList = spotsService.getSpots();
             request.setAttribute("spotstop", spotsList);
             return "home";
+        }
+        @RequestMapping("/a")
+        public String a(){return "type";}
+
+        @RequestMapping("/page")
+        public String selectpage(@RequestParam(name="currPage") int currPage, Model model,@RequestParam(name = "aid") Integer aid){
+            PageBean pageBean = new PageBean(currPage,10,spotsService.getcount(aid));
+            Integer begin = pageBean.getCurrPage()*10-10;
+            Integer num = 10;
+            List<Spots> list = spotsService.getpage(aid,begin,num);
+
+            model.addAttribute("spotsPage",list);
+            model.addAttribute("currPage",pageBean.getCurrPage());
+            model.addAttribute("totalPage",pageBean.getTotalPage());
+            model.addAttribute("aid",aid);
+            return "type";
         }
     }
