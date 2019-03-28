@@ -6,13 +6,19 @@ import com.trm.service.SpotsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class SpotsServiceimpl implements SpotsService {
     @Autowired(required = false)
     private SpotsMapper mapper;
 
     @Override
+
     public Spots findSpotsBysid(Integer sid) {
         return mapper.selectByPrimaryKey(sid);
+}
+    public List<Spots> getSpots() {
+        return mapper.selectSpots();
     }
 }
