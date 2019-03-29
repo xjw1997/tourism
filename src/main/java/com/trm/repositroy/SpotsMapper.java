@@ -1,6 +1,9 @@
 package com.trm.repositroy;
 
 import com.trm.models.Spots;
+import org.apache.ibatis.annotations.Param;
+import org.apache.ibatis.annotations.Select;
+
 import java.util.List;
 
 public interface SpotsMapper {
@@ -53,6 +56,6 @@ public interface SpotsMapper {
     @Select("select count(*) from spots where `a-id`=#{aId}")
     Integer selectcount(Integer aid);
 
-    List<Spots> selectpage(@Param("aid") Integer aid, @Param("begin") Integer begin,@Param("num") Integer num);
+    List<Spots> selectpage(@Param("aid") Integer aid, @Param("begin") Integer begin, @Param("num") Integer num);
 
 }
