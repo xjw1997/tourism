@@ -75,6 +75,11 @@
     from spots
     where 1=1 limit 5
   </select>
+<select id="selectpage" resultMap="BaseResultMap">
+  select `s-id`, `s-name`, `s-price`, `s-days`, `s-brief`, `s-type`, `s-tool`, `s-img`, `a-id`
+  from spots
+  where `a-id`=#{aid} limit #{begin},#{num}
+</select>
   <select id="selectSpotsByaid" resultMap="BaseResultMap">
     select  *
     from  spots
