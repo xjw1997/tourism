@@ -75,4 +75,9 @@
     from spots
     where 1=1 limit 5
   </select>
+  <select id="selectSpotsByaid" resultMap="BaseResultMap">
+    select  *
+    from  spots
+    where  `a-id` =   #{aid} limit 9
+  </select>
 </mapper>

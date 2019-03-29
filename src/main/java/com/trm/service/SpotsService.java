@@ -8,5 +8,6 @@ import java.util.List;
 public interface SpotsService {
     Spots findSpotsBysid(Integer sid);
     List<Spots> getSpots();
+    List<Spots> getSpotsByaid(Integer aid);
 }
 

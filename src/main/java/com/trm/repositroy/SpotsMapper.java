@@ -47,4 +47,5 @@ public interface SpotsMapper {
     int updateByPrimaryKey(Spots record);
 
     List<Spots> selectSpots();
+    List<Spots>  selectSpotsByaid(Integer aid);
 }

@@ -21,4 +21,9 @@ public class SpotsServiceimpl implements SpotsService {
     public List<Spots> getSpots() {
         return mapper.selectSpots();
     }
+
+    @Override
+    public List<Spots> getSpotsByaid(Integer aid) {
+        return  mapper.selectSpotsByaid(aid);
+    }
 }

@@ -28,10 +28,15 @@ public class Spotscontroller {
         mv.setViewName("detailed");
         return mv;
     }
-        @RequestMapping("/spotstop")
-        public String selectspots (HttpServletRequest request){
-            List<Spots> spotsList = spotsService.getSpots();
-            request.setAttribute("spotstop", spotsList);
-            return "home";
+    @RequestMapping("/spotsaid")
+    public  ModelAndView selectspotsbyaid(ModelAndView mv){
+        List<Spots> spotsList = spotsService.getSpots();
+        mv.addObject("spotstop", spotsList);
+        for (int i =1;i<=5;i++){
+            List<Spots>  spotslist = spotsService.getSpotsByaid(i);
+            mv.addObject("spotsbyaid"+i,spotslist);
         }
+        mv.setViewName("/home");
+        return  mv;
     }
+}
