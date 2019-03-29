@@ -64,14 +64,14 @@
                 </div>
             </div>
             <ul class="nav_main fr">
-                <li><a href="#/" title="北青旅首页">首页</a></li>
-                <li><a href="#/chujing.html" title="出境旅游">出境游</a></li>
-                <li><a class="hover" href="#/guonei.html" title="国内旅游">国内游</a></li>
-                <li><a href="#/zhoubian/" title="周边旅游">周边游</a></li>
-                <li><a href="#/ziyouxing/" title="自由行">自由行</a></li>
-                <li><a href="#/tuanti/" title="团队定制旅游">定制游</a><span class="new"></span></li>
-                <li><a href="#/youlun/" title="邮轮旅游">邮轮</a></li>
-                <li><a href="#/zhuti/" title="主题旅游">主题游</a></li>
+                <li><a th:href="/areaslist" title="北青旅首页">首页</a></li>
+                <li><a th:href="@{/page(aid=2,currPage=1)}" title="出境旅游">出境游</a></li>
+                <li><a class="hover" th:href="@{/page(aid=1,currPage=1)}" title="国内旅游">国内游</a></li>
+                <li><a th:href="@{/page(aid=3,currPage=1)}" title="周边旅游">周边游</a></li>
+                <li><a th:href="@{/page(aid=4,currPage=1)}" title="自由行">自由行</a></li>
+                <li><a th:href="@{/page(aid=5,currPage=1)}" title="团队定制旅游">定制游</a><span class="new"></span></li>
+                <li><a th:href="@{/page(aid=6,currPage=1)}" title="邮轮旅游">邮轮</a></li>
+                <li><a th:href="@{/page(aid=7,currPage=1)}" title="主题旅游">主题游</a></li>
                 <li><a href="#/qianzheng/" title="旅游签证">签证</a></li>
             </ul>
         </div>
