@@ -21,4 +21,5 @@ public interface DetailsMapper {
      * @mbg.generated
      */
     List<Details> selectAll();
+    List<Details> detailsById(Integer id);
 }

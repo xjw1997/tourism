@@ -2,9 +2,15 @@ package com.trm.repositroy;
 
 import com.trm.models.Spots;
 import org.apache.ibatis.annotations.Mapper;
+
+import org.apache.ibatis.annotations.Param;
+
+import org.apache.ibatis.annotations.Select;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
+import java.util.Map;
+
 @Mapper
 public interface SpotsMapper {
     /**
@@ -47,5 +53,4 @@ public interface SpotsMapper {
     int updateByPrimaryKey(Spots record);
 
     List<Spots> selectSpots();
-    List<Spots>  selectSpotsByaid(Integer aid);
 }
