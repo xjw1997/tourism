@@ -39,14 +39,9 @@ public class SpotsServiceimpl implements SpotsService {
         return mapper.selectpage(aid,begin,num);
     }
 
-
-
     @Override
-    public List<Spots> getSpotsByaid(Integer aid) {
-        return  mapper.selectSpotsByaid(aid);
+    public List<Spots> getSpotsByaid(int id) {
+        return mapper.selectSpotsByaid(id);
     }
-
-
-
 }
 

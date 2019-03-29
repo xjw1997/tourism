@@ -45,6 +45,4 @@ public interface AreasMapper {
      * @mbg.generated
      */
     int updateByPrimaryKey(Areas record);
-
-    Areas selectBysId(Integer sid);
 }

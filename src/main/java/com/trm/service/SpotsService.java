@@ -15,7 +15,6 @@ public interface SpotsService {
      * 查询前五条数据
      * */
     List<Spots> getSpots();
-    List<Spots> getSpotsByaid(Integer aid);
 
     List<Spots> getAllSpots(Integer aid);
 
@@ -24,5 +23,6 @@ public interface SpotsService {
     Integer getcount(Integer aid);
     List<Spots> getpage(Integer aid,Integer begin,Integer num);
 
+    List<Spots> getSpotsByaid(int id);
 }
 
