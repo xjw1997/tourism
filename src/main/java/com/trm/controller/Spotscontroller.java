@@ -25,9 +25,9 @@ public class Spotscontroller {
      * */
     @RequestMapping("/findSpots")
     public ModelAndView findSpots(ModelAndView mv , @RequestParam("sid") Integer sid) {
-        Spots spots = new Spots();
-        spots = spotsService.findSpotsBysid(sid);
+        Spots spots = spotsService.findSpotsBysid(sid);
         Areas areas = areasService.getName(spots.getaId());
+        System.out.println(areas);
         mv.addObject("areas",areas);
         mv.addObject("spots", spots);
         mv.setViewName("detailed");
@@ -66,6 +66,7 @@ public class Spotscontroller {
         @RequestMapping("/page")
         public String selectpage(@RequestParam(name="currPage") int currPage, Model model, @RequestParam(name = "aid") Integer aid){
             PageBean pageBean = new PageBean(currPage,10,spotsService.getcount(aid));
+
             Integer begin = currPage*10-10;
             Integer num = 10;
             List<Spots> list = spotsService.getpage(aid,begin,num);

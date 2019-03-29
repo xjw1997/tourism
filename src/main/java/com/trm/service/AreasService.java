@@ -13,7 +13,7 @@ public interface AreasService {
     /**
      * 根据景点表的aid查询
      * */
-    Areas getName(Integer id);
+    Areas getName(Integer aid);
 }
 
 
