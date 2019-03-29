@@ -829,10 +829,10 @@
             <ul>
                 <li th:each="sptop:${spotstop}">
                     <div class="pic">
-                        <a href="#" target="_blank" ><img class="lazy" th:src="@{'imgs/'+${sptop.getsImg()}+'/1.jpg'}" /></a>
+                        <a th:href="@{/detailsById(sid=${sptop.getsId()})}" target="_blank" ><img class="lazy" th:src="@{'imgs/'+${sptop.getsImg()}+'/1.jpg'}" /></a>
                     </div>
                     <div class="tit">
-                        <a href="#" target="_blank" th:text="${sptop.getsName()}"></a>
+                        <a th:href="@{/detailsById(sid=${sptop.getsId()})}" target="_blank" th:text="${sptop.getsName()}"></a>
                     </div>
                     <div class="number" th:text="'编号：'+${sptop.getsId()}"></div>
                     <div class="price">¥<span th:text="${sptop.getsPrice()}"></span>起</div>

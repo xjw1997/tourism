@@ -36,11 +36,7 @@ public class SpotsServiceimpl implements SpotsService {
         return mapper.selectcount(aid);
     }
 
-    @Override
 
-    public List<Spots> getpage(Map map, Integer aid) {
-        return mapper.selectpage(map,aid);
-    }
 
     public List<Spots> getpage(Integer aid, Integer begin, Integer num) {
         return mapper.selectpage(aid,begin,num);

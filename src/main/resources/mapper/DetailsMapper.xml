@@ -36,6 +36,6 @@
     from details
   </select>
   <select id="detailsById" resultMap="BaseResultMap" parameterType="java.lang.Integer">
-    select * from details where `s-id` = #{sId,jdbc=INTEGER}
+    select * from details where `s-id` = #{sId}
   </select>
 </mapper>

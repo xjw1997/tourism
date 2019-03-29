@@ -17,8 +17,7 @@ public interface SpotsService {
     List<Spots> getSpots();
 
     List<Spots> getAllSpots(Integer aid);
-    
-    List<Spots> getpage(Map map, Integer aid);
+
 
 
     Integer getcount(Integer aid);

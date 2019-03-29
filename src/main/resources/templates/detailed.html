@@ -953,191 +953,24 @@
                     <div class="tour_tinerary">
                         <div class="tour_days">
                             <ul>
-                                <li>
-                                    <a href="tour/21330.html#1">第1天</a>
-                                </li>
-                                <li>
-                                    <a href="tour/21330.html#2">第2天</a>
-                                </li>
-                                <li>
-                                    <a href="tour/21330.html#3">第3天</a>
-                                </li>
-                                <li>
-                                    <a href="tour/21330.html#4">第4天</a>
-                                </li>
-                                <li>
-                                    <a href="tour/21330.html#5">第5天</a>
-                                </li>
-                                <li>
-                                    <a href="tour/21330.html#6">第6天</a>
-                                </li>
-                                <li>
-                                    <a href="tour/21330.html#7">第7天</a>
+                                <li th:each="details:${session.detailsList}">
+                                    <a href="tour/21330.html#1" th:text="'第'+${details.getdDays()}+'天'"></a>
                                 </li>
                             </ul>
                         </div>
-
-                        <div class="line_info">
+                        <div class="line_info" th:each="de:${session.detailsList}">
                             <div class="infos">
                                 <div class="days">
                                     <div class="day_icon" id="1">
-                                        <a class="line" name="day1">D1</a>
+                                        <a class="line" name="day1" th:text="'D'+${de.getdDays()}"></a>
                                     </div>
-                                    <div class="jiaotong">飞机</div>
+                                    <div class="jiaotong" th:text="${de.getdTool()}"></div>
                                 </div>
                                 <div class="info">
-                                    <div class="day"><span>第1天</span>　&middot;　北京-香港-曼谷</div>
-                                    <div class="parameter"><span>住宿：</span>曼谷当地五星酒店<span>用餐：</span>不含<span>交通：</span>飞机</div>
+                                    <div class="day" th:text="'第'+${de.getdDays()}+'天  *  '+${de.getdRoute()}"></div>
+                                    <div class="parameter"><span>住宿：</span><em th:text="${de.getdStay()}"></em><span>用餐：</span><em th:text="${de.getdMeal()}"></em><span>交通：</span><em th:text="${de.getdTool()}"></em></div>
                                     <div class="cnt">
-                                        <p>
-                                            北京乘国泰航班前往香港转机前往曼谷，到达后入住酒店休息！</p>
-                                    </div>
-                                    <div class="cnt">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="line_info">
-                            <div class="infos">
-                                <div class="days">
-                                    <div class="day_icon" id="2">
-                                        <a class="line" name="day2">D2</a>
-                                    </div>
-                                    <div class="jiaotong">旅游巴士</div>
-                                </div>
-                                <div class="info">
-                                    <div class="day"><span>第2天</span>　&middot;　大皇宫-玉佛寺-湄南河-人妖歌舞秀</div>
-                                    <div class="parameter"><span>住宿：</span>曼谷当地五星<span>用餐：</span>早餐 中餐 晚餐 <span>交通：</span>旅游巴士</div>
-                                    <div class="cnt">
-                                        <p>
-                                            早餐后，乘车前往【大皇宫+玉佛寺参观】，这里紧邻湄南河，【大皇宫】是仿照故都大城的旧皇宫建造的，是泰国诸多王宫之一，是历代王宫保存最完美、规模最大、最有民族特色的王宫。曼谷王朝从拉玛一世到拉玛八世，均居于大皇宫内。现在，大皇宫除了用于举行加冕典礼、宫廷庆祝等仪式和活动外，平时对外开放，成为泰国著名的游览场所。 【玉佛寺】位于曼谷大王宫的东北角，是泰国最著名的佛寺，也是泰国三大国宝之一。玉佛寺是泰国佛教最神圣的地方，是查库里王朝的守护寺和护国寺，建于1784年的玉佛寺是泰国大王宫的一部分，面积约占大王宫的1/4。玉佛寺是泰国王族供奉玉佛像和举行宗教仪式的场所，因寺内供奉着玉佛而得名。 【皇后博物馆】主要展出的是诗丽吉王后曾经参与泰国国事访问时的衣着和首饰。还有一些影像和图片资料。对于一个女生而言在每一个重要时刻的服装最后串联起来是真的可以看出她究竟过了怎样的一生。诗丽吉是在位时间最长的王后。她这辈子历经宠辱，掀起过惊涛骇浪，因为长期从事慈善事业深受泰国人民所喜爱。从那一件件质地良好的呢子大衣，镶嵌了无数名贵宝石的小礼服……可以看到这个女生她的一生都十分精致。 【长尾船游览湄南河】乘坐泰国特色长尾船游览湄南河两岸风景秀丽，湖面湖光波兰 【金东尼人妖歌舞秀】泰国人妖在历史上就是专为歌舞而培训,因人妖天生具有强烈表演欲,至今人妖歌舞表演已经到达巅峰,雌雄难辨、精彩纷呈的演出保证让您终身难忘。表演结束后,您还可近距离欣赏人妖,跟她们比一比到底是我美还是你艳,拍照留念。
-                                        </p>
-                                    </div>
-                                    <div class="cnt">
-                                        <div class="imgs">
-                                            <div class="img"><img class="lazy" src="/images/lazy.gif" data-original="uploadfile/dongnanya/20130606031037141.jpg" /></div>
-                                            <div class="img_tit">泰国大皇宫</div>
-                                        </div>
-                                        <div class="imgs">
-                                            <div class="img"><img class="lazy" src="/images/lazy.gif" data-original="uploadfile/dongnanya/20130606030846172.jpg" /></div>
-                                            <div class="img_tit">泰国玉佛寺</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="line_info">
-                            <div class="infos">
-                                <div class="days">
-                                    <div class="day_icon" id="3">
-                                        <a class="line" name="day3">D3</a>
-                                    </div>
-                                    <div class="jiaotong">旅游巴士</div>
-                                </div>
-                                <div class="info">
-                                    <div class="day"><span>第3天</span>　&middot;　曼谷-芭提雅-珠宝免税商场-皮革中心-龙虎园</div>
-                                    <div class="parameter"><span>住宿：</span>芭提雅海边当地五星<span>用餐：</span>早餐 晚餐 <span>交通：</span>旅游巴士</div>
-                                    <div class="cnt">
-                                        <p>
-                                            早餐后前往做工精致、品质优良、泰国政府验证的【珠宝中心】参观选购. 【皮革中心】泰国名产珍珠鱼皮、鳄鱼皮、大象皮为原料的精美皮具箱包任您挑选。 午餐后前往芭堤雅 【龙虎园】，龙虎园位于泰国芭提雅附近的是拉差，是一个寓教育于娱乐的集濒危野生动物保护、 高科技养殖及旅游休闲为一体的旅游胜地。龙指的是鳄鱼，这里有人工养殖鳄鱼达数万条。驯服的老虎有数百只，堪称人工养殖世界之最，值得一游。在这里你还可以看到小猪赛跑、母老虎看顾小猪等有趣场景。另外，你还可以给小老虎喂奶，胆子大的还可以和老虎、鳄鱼合影哦。</p>
-                                    </div>
-                                    <div class="cnt">
-                                        <div class="imgs">
-                                            <div class="img"><img class="lazy" src="/images/lazy.gif" data-original="uploadfile/dongnanya/20130605034746834.jpg" /></div>
-                                            <div class="img_tit">泰国龙虎园</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="line_info">
-                            <div class="infos">
-                                <div class="days">
-                                    <div class="day_icon" id="4">
-                                        <a class="line" name="day4">D4</a>
-                                    </div>
-                                    <div class="jiaotong">旅游巴士</div>
-                                </div>
-                                <div class="info">
-                                    <div class="day"><span>第4天</span>　&middot;　芭提雅-格兰岛-乳胶中心-泰丝博物馆/土产休息站-泰式按摩</div>
-                                    <div class="parameter"><span>住宿：</span>芭提雅海边当地五星<span>用餐：</span>早餐 中餐 晚餐 <span>交通：</span>旅游巴士</div>
-                                    <div class="cnt">
-                                        <p>
-                                            【格兰岛】由芭堤雅海滩乘船前往约需15分鐘。距离芭堤雅9公里，是芭堤雅海滩外最大的岛，岛的四周有许多沙滩，沙白细绵，水清见底，海底又有许多珊瑚和热带鱼，故称珊瑚岛，是休閒、海浴、游泳、潜水和其他海上活动的好去处。 可乘别具风格的玻璃底小船，饱览海底奇景。如“月牙”一般的沙滩拥抱着碧蓝的大海，洁白鬆软的沙滩，洁净纯透的水质，使人有了投入其中的欲望。而后开始各种快乐活动。若是胆量十足，可一试水上降落伞的乐趣，于苍穹之蓝投入碧海之蓝，在下坠之中感受心跳加速，其情其景，使人畅然。而其他的娱乐项目也是不少的，碧波之中畅游，银沙之上的小憩，海上滑板衝浪，驾乘摩托海上疾驰，深水潜泳，海边垂钓，或餐饮、购物於海边小店，无论怎样都有一份属於你的格兰岛快乐。 【乳胶中心】参观泰国特产乳胶加工厂，体验泰国原产的纯天然、乳胶枕头、乳胶床垫 【泰丝博物馆】参观琳琅满目的泰国工艺泰丝（关闭则去土产休息） 【古法按摩】放松身心，请根据自身情况选择是否参加，如放弃，费用不退。 （18岁以下-65岁以上不宜参加古法按摩，由于泰国属于小费制，按摩后请付50-100泰铢小费）
-                                        </p>
-                                    </div>
-                                    <div class="cnt">
-                                        <div class="imgs">
-                                            <div class="img"><img class="lazy" src="/images/lazy.gif" data-original="uploadfile/dongnanya/20130605030004909.jpg" /></div>
-                                            <div class="img_tit">泰国泰式古法按摩</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="line_info">
-                            <div class="infos">
-                                <div class="days">
-                                    <div class="day_icon" id="5">
-                                        <a class="line" name="day5">D5</a>
-                                    </div>
-                                    <div class="jiaotong">旅游巴士</div>
-                                </div>
-                                <div class="info">
-                                    <div class="day"><span>第5天</span>　&middot;　东巴风情园-泼水节-水果大餐-清迈小镇-皇家寺-火车原石博物馆-毒蛇研究中心-KINGPOWER</div>
-                                    <div class="parameter"><span>住宿：</span>普吉岛<span>用餐：</span>早餐 中餐 晚餐 <span>交通：</span>旅游巴士</div>
-                                    <div class="cnt">
-                                        <p>
-                                            早餐后前往泰国文化特色的【东芭风情园+泼水节+水果大餐】观赏民俗表演让您领略泰国本土风情舞蹈等，风情园全力为游客展示泼水节的民俗歌舞、音乐表演，引导游客参与泼水节的欢庆活动。还可品尝泰国当地各种水果，让您吃到饱。 【清迈小镇】，在小镇内可骑大象，在大象背上领略独特风光，体验清迈风情芭提雅“清迈小镇”属泰国东方美景公司旗旅游产业。投1亿泰铢全新打造，内设项目有：骑大象、长颈族、草泥马、泰北绵羊、鳄鱼、泰国本土少数民族部落、古曼童表演、泰国本土民俗婚约仪式、邓丽君主题馆等 。（由于泰国属小费制，骑大象需付50-100泰铢小费） 【皇家寺】朝拜泰国传说中有求必应的四面佛 【火车原石博物馆】乘坐小火车进入原石博物馆，该馆采集了世界各地的奇石、怪石、宝石。全世界只有二个地方的石头没有采取。馆中最具持色的是墙上挂的幅幅‘原石拼画’。(关闭则去土产休息站) 【毒蛇研究中心】，这里有世界最毒的蛇王--金刚眼镜蛇，观看师傅空手抓蛇、抽取毒液，并介绍毒蛇的功用及野外遇蛇的急救法等；不过最神奇的却是泰国的蛇药，多少年来一直享誉海内外，功效显著。（如遇毒蛇中心关闭改去参观泰国保健中心） 【KINGPOWER】国际免税店。
-                                        </p>
-                                    </div>
-                                    <div class="cnt">
-                                        <div class="imgs">
-                                            <div class="img"><img class="lazy" src="http://www.bytst.com/images/lazy.gif" data-original="uploadfile/2015/0807/20150807033221514.jpg" /></div>
-                                            <div class="img_tit">泰国清迈小镇</div>
-                                        </div>
-                                        <div class="imgs">
-                                            <div class="img"><img class="lazy" src="http://www.bytst.com/images/lazy.gif" data-original="uploadfile/2017/0315/20170315045228656.jpg" /></div>
-                                            <div class="img_tit">KING POWER 免税店</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="line_info">
-                            <div class="infos">
-                                <div class="days">
-                                    <div class="day_icon" id="6">
-                                        <a class="line" name="day6">D6</a>
-                                    </div>
-                                    <div class="jiaotong">飞机</div>
-                                </div>
-                                <div class="info">
-                                    <div class="day"><span>第6天</span>　&middot;　曼谷-香港-北京</div>
-                                    <div class="parameter"><span>住宿：</span>飞机上<span>用餐：</span>早餐 中餐 <span>交通：</span>飞机</div>
-                                    <div class="cnt">
-                                        <p>
-                                            早餐后于指定时间后集合前往机场搭乘航班飞往香港经转机到达北京。</p>
-                                    </div>
-                                    <div class="cnt">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="line_info">
-                            <div class="infos">
-                                <div class="days">
-                                    <div class="day_icon" id="7">
-                                        <a class="line" name="day7">D7</a>
-                                    </div>
-                                    <div class="jiaotong">不含</div>
-                                </div>
-                                <div class="info end">
-                                    <div class="day"><span>第7天</span>　&middot;　北京</div>
-                                    <div class="parameter"><span>住宿：</span>不含<span>用餐：</span>不含<span>交通：</span>不含</div>
-                                    <div class="cnt">
-                                        <p>
-                                            或凌晨到达北京，结束愉快的旅程！</p>
+                                        <p th:text="${de.getdBrief()}"></p>
                                     </div>
                                     <div class="cnt">
                                     </div>
@@ -1209,67 +1042,6 @@
                     <p><img src="/images/v3/bank.jpg" alt="付款银行" title="付款银行" /></p>
                     <p>汇款：通过银行将相关款项汇至指定账户，户名及账号请咨询400-961-1766、010-51291766！</p>
                 </div>
-            </div>
-
-            <div class="detail_cnt">
-                <h2><a id="ts8" name="ts8">相关行程</a></h2>
-                <ul class="line_list">
-                    <li>
-                        <div class="img">
-                            <a href="tour/6198.html" target="_blank" title="&lt;泰国曼谷自由行6日&gt;曼谷首晚Agoda五钻酒店 曼谷机场接机服务 北京机场专领送关服务 可升级市区套餐服务"><img src="uploadfile/dongnanya/20130606031037126.jpg" alt="&lt;泰国曼谷自由行6日&gt;曼谷首晚Agoda五钻酒店 曼谷机场接机服务 北京机场专领送关服务 可升级市区套餐服务" title="&lt;泰国曼谷自由行6日&gt;曼谷首晚Agoda五钻酒店 曼谷机场接机服务 北京机场专领送关服务 可升级市区套餐服务" /></a>
-                        </div>
-                        <div class="title">
-                            <a href="tour/6198.html" target="_blank" title="&lt;泰国曼谷自由行6日&gt;曼谷首晚Agoda五钻酒店 曼谷机场接机服务 北京机场专领送关服务 可升级市区套餐服务">
-                                &lt;泰国曼谷自由行6日&gt;曼谷首晚Agoda五钻酒店 曼谷机场接机服务 北京机场专领送关服务 可升级市区套餐服务</a>
-                        </div>
-                        <div class="area">泰国</div>
-                        <div class="price">¥<span>3610</span>起</div>
-                    </li>
-                    <li>
-                        <div class="img">
-                            <a href="tour/21330.html" target="_blank" title="&lt;初见泰国 曼谷-芭提雅-格兰岛7日&gt;畅游金沙岛+月光岛 全程无自费 曼谷3晚泰式五星 芭提雅2晚海边五星 3大特色餐厅美食享不停"><img class="lazy" src="/images/lazy.gif" data-original="uploadfile/dongnanya/20130606030333524.jpg" alt="&lt;初见泰国 曼谷-芭提雅-格兰岛7日&gt;畅游金沙岛+月光岛 全程无自费 曼谷3晚泰式五星 芭提雅2晚海边五星 3大特色餐厅美食享不停" title="&lt;初见泰国 曼谷-芭提雅-格兰岛7日&gt;畅游金沙岛+月光岛 全程无自费 曼谷3晚泰式五星 芭提雅2晚海边五星 3大特色餐厅美食享不停" /></a>
-                        </div>
-                        <div class="title">
-                            <a href="tour/21330.html" target="_blank" title="&lt;初见泰国 曼谷-芭提雅-格兰岛7日&gt;畅游金沙岛+月光岛 全程无自费 曼谷3晚泰式五星 芭提雅2晚海边五星 3大特色餐厅美食享不停">
-                                &lt;初见泰国 曼谷-芭提雅-格兰岛7日&gt;畅游金沙岛+月光岛 全程无自费 曼谷3晚泰式五星 芭提雅2晚海边五星 3大特色餐厅美食享不停</a>
-                        </div>
-                        <div class="area">泰国</div>
-                        <div class="price">¥<span>2300</span>起</div>
-                    </li>
-                    <li>
-                        <div class="img">
-                            <a href="tour/6379.html" target="_blank" title="&lt;经济实惠 泰国-新加坡-马来西亚10日&gt;千人出游 不走回头路 自费推荐不强迫 东芭风情园 泰拳表演 清迈小镇 新马市区观光"><img class="lazy" src="/images/lazy.gif" data-original="uploadfile/dongnanya/20130606021938599.jpg" alt="&lt;经济实惠 泰国-新加坡-马来西亚10日&gt;千人出游 不走回头路 自费推荐不强迫 东芭风情园 泰拳表演 清迈小镇 新马市区观光" title="&lt;经济实惠 泰国-新加坡-马来西亚10日&gt;千人出游 不走回头路 自费推荐不强迫 东芭风情园 泰拳表演 清迈小镇 新马市区观光" /></a>
-                        </div>
-                        <div class="title">
-                            <a href="tour/6379.html" target="_blank" title="&lt;经济实惠 泰国-新加坡-马来西亚10日&gt;千人出游 不走回头路 自费推荐不强迫 东芭风情园 泰拳表演 清迈小镇 新马市区观光">
-                                &lt;经济实惠 泰国-新加坡-马来西亚10日&gt;千人出游 不走回头路 自费推荐不强迫 东芭风情园 泰拳表演 清迈小镇 新马市区观光</a>
-                        </div>
-                        <div class="area">泰国</div>
-                        <div class="price">¥<span>2319</span>起</div>
-                    </li>
-                    <li>
-                        <div class="img">
-                            <a href="tour/6384.html" target="_blank" title="&lt;泰国清迈自由行7日&gt;5晚清迈都喜D2酒店"><img class="lazy" src="/images/lazy.gif" data-original="uploadfile/dongnanya/20130531052606851.jpg" alt="&lt;泰国清迈自由行7日&gt;5晚清迈都喜D2酒店" title="&lt;泰国清迈自由行7日&gt;5晚清迈都喜D2酒店" /></a>
-                        </div>
-                        <div class="title">
-                            <a href="tour/6384.html" target="_blank" title="&lt;泰国清迈自由行7日&gt;5晚清迈都喜D2酒店">
-                                &lt;泰国清迈自由行7日&gt;5晚清迈都喜D2酒店</a>
-                        </div>
-                        <div class="area">泰国</div>
-                        <div class="price">¥<span>5099</span>起</div>
-                    </li>
-                    <li class="end">
-                        <div class="img">
-                            <a href="tour/4886.html" target="_blank" title="&lt;泰国清迈自由行7日&gt;5晚清迈皇家公主酒店"><img class="lazy" src="/images/lazy.gif" data-original="uploadfile/dongnanya/20130531050533322.jpg" alt="&lt;泰国清迈自由行7日&gt;5晚清迈皇家公主酒店" title="&lt;泰国清迈自由行7日&gt;5晚清迈皇家公主酒店" /></a>
-                        </div>
-                        <div class="title">
-                            <a href="tour/4886.html" target="_blank" title="&lt;泰国清迈自由行7日&gt;5晚清迈皇家公主酒店">
-                                &lt;泰国清迈自由行7日&gt;5晚清迈皇家公主酒店</a>
-                        </div>
-                        <div class="area">泰国</div>
-                        <div class="price">¥<span>4889</span>起</div>
-                    </li>
-                </ul>
             </div>
         </div>
 

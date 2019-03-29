@@ -89,15 +89,15 @@
             <div class="lb_line line_88">
                 <h2 title="北京去海南旅游海口往返旅游线路"><span>海口往返</span></h2>
                 <ul>
-                    <li th:each="spotspage:${spotspage}">
+                    <li th:each="spotspage:${spotsPage}">
                         <div class="img">
-                            <a href="#/tour/16287.html" target="_blank">
-                                <img th:src="@{'imgs/'+${spotspage.getsImg()+'/1.jpg'}"/>
+                            <a th:href="@{/detailsById(sid=${spotspage.getsId()})}" target="_blank">
+                                <img th:src="@{'imgs/'+${spotspage.getsImg()}+'/1.jpg'}"/>
                             </a>
                         </div>
                         <div class="line_info">
                             <div class="tit">
-                                <a href="#/tour/16287.html" target="_blank">
+                                <a th:href="@{/detailsById(sid=${spotspage.getsId()})}" target="_blank">
                                     <span th:text="${spotspage.getsName()}"></span>
                                 </a>
                             </div>
@@ -105,7 +105,7 @@
                     </div>
                     <div class="prices">
                         <div class="price">¥<span th:text="${spotspage.getsPrice()}"></span>起</div>
-                        <a href="#/tour/16287.html" target="_blank">查看详情</a>
+                        <a th:href="@{/detailsById(sid=${spotspage.getsId()})}" target="_blank">查看详情</a>
                     </div>
                     <div class="lineNumber">NO：<span th:text="${spotspage.getsId()}"></span></div>
                 </li>

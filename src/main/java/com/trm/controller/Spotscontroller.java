@@ -5,10 +5,7 @@ import com.trm.models.Spots;
 import com.trm.service.AreasService;
 import com.trm.service.SpotsService;
 import com.trm.util.PageBean;
-<<<<<<< HEAD
 import org.apache.ibatis.annotations.Param;
-=======
->>>>>>> b1e9a83d176fe29976e0f681d437995a7358859d
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -36,7 +33,7 @@ public class Spotscontroller {
         Areas areas = areasService.getName(spots.getaId());
         mv.addObject("areas",areas);
         mv.addObject("spots", spots);
-        mv.setViewName("redirect:/detailsById");
+        mv.setViewName("detailed");
         return mv;
     }
     /**
@@ -48,7 +45,6 @@ public class Spotscontroller {
             request.setAttribute("spotstop", spotsList);
             return "home";
         }
-<<<<<<< HEAD
         @RequestMapping("/AllSpots")
         public ModelAndView selectAllSpots(ModelAndView mv, @RequestParam("aid") Integer aid){
         List<Spots> list = spotsService.getAllSpots(aid);
@@ -61,15 +57,13 @@ public class Spotscontroller {
         @RequestMapping("/page")
         public String selectpage(@RequestParam(name="currPage") int currPage, Model model,@RequestParam(name = "aid") Integer aid){
             PageBean pageBean = new PageBean(currPage,10,spotsService.getcount(aid));
-            Integer begin = pageBean.getCurrPage()*10-10;
+            Integer begin = currPage*10-10;
             Integer num = 10;
             List<Spots> list = spotsService.getpage(aid,begin,num);
-
             model.addAttribute("spotsPage",list);
             model.addAttribute("currPage",pageBean.getCurrPage());
             model.addAttribute("totalPage",pageBean.getTotalPage());
             model.addAttribute("aid",aid);
-
             return "type";
         }
     }

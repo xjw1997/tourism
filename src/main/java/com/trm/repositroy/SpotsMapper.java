@@ -59,13 +59,9 @@ public interface SpotsMapper {
      * @mbg.generated
      * */
     List<Spots> selectSpots();
-    @Select("select count(*) from spots where 'a-id'=#{aId}")
+    @Select("select count(*) from spots where `a-id`=#{aId}")
     Integer selectcount(Integer aid);
-    
 
-    
-
-    @Select("select * from spots where `a-id`=#{aid} limit #{begin},#{num}")
     List<Spots> selectpage(@Param("aid") Integer aid, @Param("begin") Integer begin,@Param("num") Integer num);
 
 }
