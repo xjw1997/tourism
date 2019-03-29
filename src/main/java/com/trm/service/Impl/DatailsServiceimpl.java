@@ -21,5 +21,4 @@ public class DatailsServiceimpl implements DatailsService {
         return mapper.detailsById(id);
     }
 
-
 }
