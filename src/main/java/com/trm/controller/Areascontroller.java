@@ -20,6 +20,6 @@ public class Areascontroller {
     public String selectall(HttpSession request){
         List<Areas> list = areasService.getAll();
         request.setAttribute("areaslist",list);
-        return "redirect:/spotstop";
+        return "redirect:/spotsaid";
     }
 }
