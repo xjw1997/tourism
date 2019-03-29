@@ -13,6 +13,9 @@ import java.util.List;
 public class Areascontroller {
     @Autowired(required = false)
     private AreasService areasService;
+    /**
+     * 查询所有方法
+     * */
     @RequestMapping("/areaslist")
     public String selectall(HttpSession request){
         List<Areas> list = areasService.getAll();
