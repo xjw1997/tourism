@@ -1,0 +1,219 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0028)#/hainan/ -->
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title></title>
+
+    <meta name="keywords" content="">
+    <meta name="description"
+          content="">
+    <link rel="shortcut icon" href="#/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="a_files/v4.css">
+    <link rel="stylesheet" type="text/css" href="a_files/font-awesome.css">
+    <script charset="utf-8" src="a_files/lxb.js.下载"></script>
+    <script charset="utf-8" src="a_files/v.js.下载"></script>
+    <script src="./a_files/hm.js.下载"></script>
+    <script type="text/javascript" src="a_files/jquery-1.8.3.min.js.下载"></script>
+    <script type="text/javascript" src="a_files/jquery.lazyload.js.下载"></script>
+    <script type="text/javascript" src="a_files/default.js.下载"></script>
+    <link rel="stylesheet" href="a_files/float.css" type="text/css" charset="utf-8">
+</head>
+
+<body>
+<div class="header fl">
+    <div class="tops fl">
+        <div class="top">
+            <div class="top_l fl">
+                <span class="fa fa-home"></span>
+            </div>
+            <ul class="top_r fr">
+                <li class="weibo"><a href="javascript:;" rel="external nofollow" title="北青旅官方微博">微博</a></li>
+                -->
+                <li><a class="favorites" rel="external nofollow" href="javascript:;">加入收藏</a></li>
+                <li class="mobile"><a href="javascript:;" rel="external nofollow" title="北青旅手机版官网">手机版</a></li>
+                <li class=""><a href="#/sitemap.html" target="_blank">网站地图</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="logos fl">
+        <div class="logo">
+            <div class="logo_ico fl"><a href="#/" target="_blank" title="北青旅"><img alt="北青旅" src="./a_files/logo.jpg"
+                                                                                   title="北青旅"></a></div>
+            <div class="search fl">
+                <form class="search_main" onsubmit="return search_destination()" method="get" name="myform">
+                    <div class="search_type">
+                        <div>全部<span>　</span></div>
+                    </div>
+                    <input id="destination" type="text" onfocus="$(this).val(&#39;&#39;)" onblur="isnull(this.value)"
+                           value="泰国/希腊/云南">
+                    <input id="submit" type="submit" value="搜 索">
+                </form>
+            </div>
+            <div class="phone fr"><img alt="北青旅官网电话：4000-635-188 4000-135-199 010-51269222 010-51269333"
+                                       src="./a_files/phone.jpg"
+                                       title="北青旅官网电话：4000-635-188 4000-135-199 010-51269222 010-51269333"></div>
+        </div>
+    </div>
+    <div class="navigation">
+        <div class="nav">
+            <div class="category">
+                <div class="mt">
+                    <h2>全部旅游线路分类</h2>
+                </div>
+            </div>
+            <ul class="nav_main fr">
+                <li><a href="#/" title="北青旅首页">首页</a></li>
+                <li><a href="#/chujing.html" title="出境旅游">出境游</a></li>
+                <li><a class="hover" href="#/guonei.html" title="国内旅游">国内游</a></li>
+                <li><a href="#/zhoubian/" title="周边旅游">周边游</a></li>
+                <li><a href="#/ziyouxing/" title="自由行">自由行</a></li>
+                <li><a href="#/tuanti/" title="团队定制旅游">定制游</a><span class="new"></span></li>
+                <li><a href="#/youlun/" title="邮轮旅游">邮轮</a></li>
+                <li><a href="#/zhuti/" title="主题旅游">主题游</a></li>
+                <li><a href="#/qianzheng/" title="旅游签证">签证</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="regionCnts fl">
+    <div class="content">
+        <div class="bread_crumb">
+            <span class="fa fa-home"></span>
+            <div>您当前的位置：</div>
+            <a href="#/" target="_blank" title="北青旅首页">首页</a> &gt; <a href="#/guonei.html" target="_blank" title="国内旅游">国内游</a>
+            &gt; <a href="#/hainan/" target="_blank" title="海南旅游">海南旅游</a>
+        </div>
+        <div class="content_right">
+            <div class="lb_line line_88">
+                <h2 title="北京去海南旅游海口往返旅游线路"><span>海口往返</span></h2>
+                <ul>
+                    <li th:each="spotspage:${spotspage}">
+                        <div class="img">
+                            <a href="#/tour/16287.html" target="_blank">
+                                <img th:src="@{'imgs/'+${spotspage.getsImg()+'/1.jpg'}"/>
+                            </a>
+                        </div>
+                        <div class="line_info">
+                            <div class="tit">
+                                <a href="#/tour/16287.html" target="_blank">
+                                    <span th:text="${spotspage.getsName()}"></span>
+                                </a>
+                            </div>
+                        <div class="tese"></div>
+                    </div>
+                    <div class="prices">
+                        <div class="price">¥<span th:text="${spotspage.getsPrice()}"></span>起</div>
+                        <a href="#/tour/16287.html" target="_blank">查看详情</a>
+                    </div>
+                    <div class="lineNumber">NO：<span th:text="${spotspage.getsId()}"></span></div>
+                </li>
+                </ul>
+                <div>
+                    <a th:href="@{/page(currPage=1,aid=${aid}) }">首页</a>
+                    <a th:href="@{/page(currPage=${currPage}-1,aid=${aid})}">上一页</a> <!--这两个currPage要分清，第一个是要传给后端的，也就是上一页的页数，第二个是后端传过来的，也就是这一页的页灵长-->
+
+                    <span th:each="i : ${ #numbers.sequence(1,totalPage) }">
+                        <a th:text="${i}" th:href="@{ /page(currPage=${i},aid=${aid}) }"></a>
+                    </span>
+
+                    <a th:href="@{/page(currPage=${currPage}+1,aid=${aid})}">下一页</a>
+                    <a th:href="@{ /page(currPage=${totalPage},aid=${aid}) }">尾页</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="./a_files/twoarea.js.下载"></script>
+<script type="text/javascript" src="./a_files/bxCarousel.js.下载"></script>
+<div class="footers">
+
+    <div class="FAQs">
+        <div class="FAQs_cnt">
+            <ul class="faq01">
+                <li><a href="#/about/" target="_blank" title="北青旅关于我们">关于我们</a></li>
+                <li><a href="#/lxwm/" target="_blank" title="北青旅联系我们">联系我们</a></li>
+                <li><a href="#/flsm/" target="_blank" title="北青旅法律声明">法律声明</a></li>
+                <li><a href="#/ysbh/" target="_blank" title="北青旅隐私保护">隐私保护</a></li>
+                <li><a href="#/mzsm/" target="_blank" title="北青旅免责声明">免责声明</a></li>
+            </ul>
+
+            <ul class="faq02">
+                <li>预订常见问题</li>
+                <li><a href="#/news/19895.html" target="_blank">纯玩是什么意思</a></li>
+                <li><a href="#/news/19896.html" target="_blank">单房差是什么</a></li>
+                <li><a href="#/news/19379.html" target="_blank">双飞、双卧是什么意思</a></li>
+                <li><a href="#/news/19897.html" target="_blank">一价全含是什么</a></li>
+            </ul>
+
+            <ul class="faq03">
+                <li>签约、付款、发票</li>
+                <li><a href="#/news/19383.html" target="_blank">可以不签合同吗</a></li>
+                <li><a href="#/news/19898.html" target="_blank">签约方式</a></li>
+                <li><a href="#/news/19899.html" target="_blank">付款方式</a></li>
+                <li><a href="#/news/19900.html" target="_blank">发票制度</a></li>
+            </ul>
+
+            <ul class="faq04">
+                <li>出境、港澳台资料</li>
+                <li><a href="#/news/17192.html" target="_blank">如何办理护照</a></li>
+                <li><a href="#/news/17193.html" target="_blank">如何办理签证</a></li>
+                <li><a href="#/news/17194.html" target="_blank">如何办理港澳通行证</a></li>
+                <li><a href="#/news/17195.html" target="_blank">如何办理台湾通行证</a></li>
+            </ul>
+
+            <ul class="faq05">
+                <li>出行须知</li>
+                <li><a href="#/news/19901.html" target="_blank">出团相关问题</a></li>
+                <li><a href="#/news/19902.html" target="_blank">乘机注意事项</a></li>
+                <li><a href="#/news/19387.html" target="_blank">酒店、住宿问题</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="both"></div>
+    <div class="slogans">
+        <div class="slogan">
+        </div>
+    </div>
+</div>
+
+<center>
+    <script>
+        var _hmt = _hmt || [];
+        (function () {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?d2e29fa10633a15627f3eeaf5b1f93a0";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+    <script type="text/javascript" charset="utf-8" async="" src="./a_files/lxb.js.下载"></script>
+</center>
+
+<ins class="lxb-container"
+     style="height: 230px; width: 140px; border: 0px none rgb(0, 0, 0); background-color: rgb(36, 189, 166); position: fixed; display: none; top: 203.5px; right: 0px;"
+     id="LXB_CONTAINER">
+    <ins class="custom-text"
+         style="left: 0px; top: 1px; width: 140px; height: 177px; background-image: url(http://lxb.baidu.com/newFloat/asset/img/1003/1.png); background-color: rgb(36, 189, 166);"></ins>
+    <ins class="lxb-hide-btn"
+         style="left: 128px; top: 4px; width: 9px; height: 8px; background-image: url(http://lxb.baidu.com/newFloat/asset/img/close.png);"></ins>
+    <ins class="lxb-tl-phone"
+         style="width: 105px; height: 38px; left: 18px; top: 128px; color: rgb(255, 255, 255); font-weight: bold; font-family: 微软雅黑; font-size: 14px; display: none;"></ins>
+    <input class="lxb-cb-input" value="请输入您的电话号码"
+           style="left: 9px; top: 166px; width: 124px; height: 22px; line-height: 22px; border: 0px none rgb(0, 0, 0);"><input
+        class="lxb-cb-input-btn" value="立即免费通话"
+        style="left: 17px; top: 195px; width: 109px; height: 28px; border: 0px none rgb(0, 0, 0); color: rgb(51, 51, 51); font-size: 14px; font-weight: bold; background-color: rgb(224, 255, 171);"
+        type="button">
+    <ins class="lxb-group-con" style="display: none; top: 191px;"></ins>
+    <ins class="lxb-cb-tip" style="z-index: 2147483647; display: none;">
+        <ins class="lxb-cb-tip-con"></ins>
+        <ins class="lxb-cb-tip-arrow"></ins>
+        <ins class="lxb-cb-tip-close">╳</ins>
+    </ins>
+</ins>
+<ins class="lxb-close-btn"
+     style="width: 40px; height: 88px; border: 0px none rgb(0, 0, 0); background-image: url(&quot;http://lxb.baidu.com/newFloat/asset/img/btn-show-bg.png&quot;); background-color: rgb(57, 168, 13); position: fixed; top: 274.5px; right: 0px;"
+     id="LXB_CLOSE_BTN"></ins>
+</body>
+</html>

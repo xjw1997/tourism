@@ -5,7 +5,10 @@ import com.trm.models.Spots;
 import com.trm.service.AreasService;
 import com.trm.service.SpotsService;
 import com.trm.util.PageBean;
+<<<<<<< HEAD
 import org.apache.ibatis.annotations.Param;
+=======
+>>>>>>> b1e9a83d176fe29976e0f681d437995a7358859d
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -23,6 +26,9 @@ public class Spotscontroller {
     private SpotsService spotsService;
     @Autowired(required = false)
     private AreasService areasService;
+    /**
+     * 根据景点sid查询景点表
+     * */
     @RequestMapping("/findSpots")
     public ModelAndView findSpots(ModelAndView mv , @RequestParam("sid") Integer sid) {
         Spots spots = new Spots();
@@ -33,12 +39,16 @@ public class Spotscontroller {
         mv.setViewName("detailed");
         return mv;
     }
+    /**
+     * 查询景点前五条数据
+     * */
         @RequestMapping("/spotstop")
         public String selectspots (HttpServletRequest request){
             List<Spots> spotsList = spotsService.getSpots();
             request.setAttribute("spotstop", spotsList);
             return "home";
         }
+<<<<<<< HEAD
         @RequestMapping("/AllSpots")
         public ModelAndView selectAllSpots(ModelAndView mv, @RequestParam("aid") Integer aid){
         List<Spots> list = spotsService.getAllSpots(aid);
@@ -46,16 +56,20 @@ public class Spotscontroller {
         mv.setViewName("type");
             return mv;
         }
+        
+
         @RequestMapping("/page")
-        public String selectpage(@RequestParam("currPage") int currPage, Model model,@RequestParam("aid") Integer aid){
+        public String selectpage(@RequestParam(name="currPage") int currPage, Model model,@RequestParam(name = "aid") Integer aid){
             PageBean pageBean = new PageBean(currPage,10,spotsService.getcount(aid));
-            Map<String,Integer> map = new HashMap<>();
-            map.put("begin",currPage*10-10);
-            map.put("num",10);
-            List<Spots> list = spotsService.getpage(map,aid);
-            model.addAttribute("spotspage",list);
-            model.addAttribute("currPage",currPage);
-            model.addAttribute("totalPage",pageBean.getTotalCount());
+            Integer begin = pageBean.getCurrPage()*10-10;
+            Integer num = 10;
+            List<Spots> list = spotsService.getpage(aid,begin,num);
+
+            model.addAttribute("spotsPage",list);
+            model.addAttribute("currPage",pageBean.getCurrPage());
+            model.addAttribute("totalPage",pageBean.getTotalPage());
+            model.addAttribute("aid",aid);
+
             return "type";
         }
     }
