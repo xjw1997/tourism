@@ -846,12 +846,12 @@
             <ul class="line_list hover">
                 <li th:each="spotstow:${spotsbyaid2}">
                     <div class="img">
-                        <a href="#" target="_blank" >
+                        <a th:href="@{/detailsById(sid=${spotstow.getsId()})}" target="_blank" >
                             <img class="lazy" th:src="@{'../imgs/'+${spotstow.getsImg()}+'/1.jpg'}" />
                         </a>
                     </div>
                     <div class="tit">
-                        <a href="#" target="_blank" th:text="${spotstow.getsName()}">
+                        <a th:href="@{/detailsById(sid=${spotstow.getsId()})}" target="_blank" th:text="${spotstow.getsName()}">
                             </a>
                     </div>
                     <div class="liyou" th:text="${spotstow.getsBrief()}"></div>
@@ -864,12 +864,12 @@
             <ul class="line_list hover">
                 <li th:each="spotsfive:${spotsbyaid5}">
                     <div class="img">
-                        <a href="tour/18955.html" target="_blank" >
+                        <a th:href="@{/detailsById(sid=${spotsfive.getsId()})}" target="_blank" >
                             <img class="lazy" th:src="@{'../imgs/'+${spotsfive.getsImg()}+'/1.jpg'}"  />
                         </a>
                     </div>
                     <div class="tit">
-                        <a href="tour/18955.html" th:text="${spotsfive.getsName()}">
+                        <a th:href="@{/detailsById(sid=${spotsfive.getsId()})}" th:text="${spotsfive.getsName()}">
                             </a>
                     </div>
                     <div class="liyou" th:text="${spotsfive.getsBrief()}"></div>
@@ -883,12 +883,12 @@
             <ul class="line_list hover">
                 <li th:each="spotsone:${spotsbyaid1}">
                     <div class="img">
-                        <a href="tour/18955.html" target="_blank" >
+                        <a th:href="@{/detailsById(sid=${spotsone.getsId()})}" target="_blank" >
                             <img class="lazy" th:src="@{'../imgs/'+${spotsone.getsImg()}+'/1.jpg'}"  />
                         </a>
                     </div>
                     <div class="tit">
-                        <a href="tour/18955.html" th:text="${spotsone.getsName()}">
+                        <a th:href="@{/detailsById(sid=${spotsone.getsId()})}" th:text="${spotsone.getsName()}">
                         </a>
                     </div>
                     <div class="liyou" th:text="${spotsone.getsBrief()}"></div>
@@ -902,12 +902,12 @@
             <ul class="line_list hover">
                 <li th:each="spotsfour:${spotsbyaid4}">
                     <div class="img">
-                        <a href="tour/18955.html" target="_blank" >
+                        <a th:href="@{/detailsById(sid=${spotsfour.getsId()})}" target="_blank" >
                             <img class="lazy" th:src="@{'../imgs/'+${spotsfour.getsImg()}+'/1.jpg'}"  />
                         </a>
                     </div>
                     <div class="tit">
-                        <a href="tour/18955.html" th:text="${spotsfour.getsName()}">
+                        <a th:href="@{/detailsById(sid=${spotsfour.getsId()})}" th:text="${spotsfour.getsName()}">
                         </a>
                     </div>
                     <div class="liyou" th:text="${spotsfour.getsBrief()}"></div>
@@ -922,12 +922,12 @@
                 <ul class="line_list hover">
                     <li th:each="spotsthree:${spotsbyaid3}">
                         <div class="img">
-                            <a href="tour/18955.html" target="_blank" >
+                            <a th:href="@{/detailsById(sid=${spotsthree.getsId()})}" target="_blank" >
                                 <img class="lazy" th:src="@{'../imgs/'+${spotsthree.getsImg()}+'/1.jpg'}"  />
                             </a>
                         </div>
                         <div class="tit">
-                            <a href="tour/18955.html" th:text="${spotsthree.getsName()}">
+                            <a th:href="@{/detailsById(sid=${spotsthree.getsId()})}" th:text="${spotsthree.getsName()}">
                             </a>
                         </div>
                         <div class="liyou" th:text="${spotsthree.getsBrief()}"></div>
